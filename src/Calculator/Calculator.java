@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Calculator {
-    public Calculator() throws IOException {
+    public static String calculator() throws IOException {
         System.out.println("первое число = ");
         int n1 = number();
         System.out.println("что будем делать с числом? (введи математический знак) =  ");
@@ -13,7 +13,8 @@ public class Calculator {
         System.out.println("второе число = ");
         int n2 = number();
         long res1 = res(n1, symb, n2);
-        System.out.println("Результат исчеслений = " + res1);
+        return "Результат исчеслений = " + res1;
+
     }
 
     public static int number() throws IOException {
